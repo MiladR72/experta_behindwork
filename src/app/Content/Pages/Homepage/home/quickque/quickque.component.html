@@ -1,0 +1,158 @@
+<div class="mgh_quickque">
+  <form [formGroup]="quick_que" (submit)="SubmitForm()">
+  <div class="mgh_quickque_wrapper">
+    <input
+      class="mgh_quickque_inpt_title"
+      type="text"
+      placeholder="عنوان"
+      formControlName="title"
+    >
+    <div class="mgh_quickque_input_content">
+      <textarea
+        class="mgh_quickque_input" type="text"
+        (keyup)="autogrow()"
+        placeholder="چه سوالی در ذهنتون دارید؟"
+        #textArea
+        maxlength="240"
+        formControlName="question"
+      ></textarea>
+      <div class="mgh_showchar_num" #showchar>
+        <span>240 / </span><span>{{char_count?char_count:0}}</span>
+      </div>
+    </div>
+
+    <div class="mgh_attch_icons">
+      <span class="mgh_attach_icon_img {{ActiveAttach.attachimage?'active':null}}" (click)="toggle('image');file.click()" >
+        <input style="display: none" type="file" #file (change)="importimage(file.files)">
+        <svg width="26px" height="20px" class="mgh_attach_icon" viewBox="0 0 26 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>آپلود عکس</title>
+              <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Attachicon" transform="translate(-470.000000, -135.000000)" fill="#9B9B9B" fill-rule="nonzero">
+                      <g id="Group-26" transform="translate(450.000000, 112.000000)">
+                          <g id="flaticon1538833783-svg" transform="translate(20.000000, 23.000000)">
+                              <path d="M24.7826087,0 L0.434782609,0 C0.194782609,0 0,0.194347826 0,0.434782609 L0,19.5652174 C0,19.8056522 0.194782609,20 0.434782609,20 L24.7826087,20 C25.0226087,20 25.2173913,19.8056522 25.2173913,19.5652174 L25.2173913,0.434782609 C25.2173913,0.194347826 25.0226087,0 24.7826087,0 Z M24.3478261,19.1304348 L0.869565217,19.1304348 L0.869565217,0.869565217 L24.3478261,0.869565217 L24.3478261,19.1304348 Z" id="Shape"></path>
+                              <path d="M6.95652174,9.62521739 C8.29173913,9.62521739 9.37782609,8.53913043 9.37782609,7.20434783 C9.37782609,5.86869565 8.29173913,4.7826087 6.95652174,4.7826087 C5.62130435,4.7826087 4.53521739,5.86869565 4.53521739,7.20391304 C4.53521739,8.53913043 5.62130435,9.62521739 6.95652174,9.62521739 Z M6.95652174,5.65217391 C7.81217391,5.65217391 8.50826087,6.34869565 8.50826087,7.20391304 C8.50826087,8.05913043 7.81217391,8.75565217 6.95652174,8.75565217 C6.10086957,8.75565217 5.40478261,8.05956522 5.40478261,7.20434783 C5.40478261,6.34913043 6.10086957,5.65217391 6.95652174,5.65217391 Z" id="Shape"></path>
+                              <path d="M3.04347826,17.3913043 C3.14521739,17.3913043 3.24782609,17.3556522 3.33043478,17.2830435 L10.4230435,11.0386957 L14.9021739,15.5173913 C15.0721739,15.6873913 15.3469565,15.6873913 15.5169565,15.5173913 C15.6869565,15.3473913 15.6869565,15.0726087 15.5169565,14.9026087 L13.4269565,12.8126087 L17.4186957,8.44130435 L22.3147826,12.9295652 C22.4917391,13.0917391 22.7669565,13.0795652 22.9291304,12.9026087 C23.0913043,12.7256522 23.0795652,12.4504348 22.9021739,12.2882609 L17.6847826,7.50565217 C17.5995652,7.42782609 17.486087,7.38913043 17.3717391,7.39173913 C17.2565217,7.39695652 17.1478261,7.44782609 17.07,7.53304348 L12.8117391,12.1969565 L10.7495652,10.1347826 C10.5869565,9.9726087 10.3269565,9.96434783 10.1547826,10.1156522 L2.75608696,16.63 C2.57565217,16.7886957 2.55826087,17.0634783 2.71695652,17.243913 C2.80304348,17.3417391 2.92304348,17.3913043 3.04347826,17.3913043 Z" id="Shape"></path>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+         </svg>
+      </span>
+      <span class="mgh_attach_icon_img {{ActiveAttach.attachlink?'active':null}}" (click)="toggle('link')">
+        <svg class="mgh_attach_icon" width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>آدرس لینک</title>
+    <desc></desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Attachicon" transform="translate(-516.000000, -135.000000)" fill="#9B9B9B" fill-rule="nonzero">
+            <g id="Group-26" transform="translate(450.000000, 112.000000)">
+                <g id="flaticon1538833922-svg" transform="translate(66.000000, 23.000000)">
+                    <path d="M11.1384925,8.43679705 C10.907168,8.66812154 10.907168,9.03911365 11.1384925,9.27043814 C12.0943428,10.2262884 12.0943428,11.7800906 11.1384925,12.7359409 L6.11918751,17.7552459 C5.16333725,18.7110962 3.609535,18.7110962 2.65368474,17.7552459 L1.89860668,17.0001679 C0.942756421,16.0443176 0.942756421,14.4905154 1.89860668,13.5346651 L6.9179117,8.51536008 C7.14923619,8.28403559 7.14923619,7.91304348 6.9179117,7.68171899 C6.68658721,7.45039449 6.3155951,7.45039449 6.08427061,7.68171899 L1.06496559,12.701024 C0.379721336,13.3862683 0,14.2984724 0,15.2674165 C0,16.2363606 0.375356723,17.1485647 1.06496559,17.833809 L1.82004365,18.588887 C2.52711096,19.2959543 3.45677354,19.649488 4.38643613,19.649488 C5.31609871,19.649488 6.24576129,19.2959543 6.95282861,18.588887 L11.9721336,13.569582 C13.3862683,12.1554474 13.3862683,9.85093168 11.9721336,8.43679705 C11.7451737,8.20547255 11.369817,8.20547255 11.1384925,8.43679705 Z" id="Shape"></path>
+                    <path d="M20.0117509,1.84186671 L19.2566728,1.08678865 C17.8425382,-0.32734598 15.5380225,-0.32734598 14.1238879,1.08678865 L9.10458284,6.10609367 C7.69044821,7.5202283 7.69044821,9.824744 9.10458284,11.2388786 C9.33590734,11.4702031 9.70689945,11.4702031 9.93822394,11.2388786 C10.1695484,11.0075541 10.1695484,10.636562 9.93822394,10.4052375 C8.98237368,9.44938728 8.98237368,7.89558503 9.93822394,6.93973477 L14.957529,1.92042975 C15.9133792,0.964579486 17.4671815,0.964579486 18.4230317,1.92042975 L19.1781098,2.67550781 C20.13396,3.63135807 20.13396,5.18516032 19.1781098,6.14101058 L14.1588048,11.1603156 C13.9274803,11.3916401 13.9274803,11.7626322 14.1588048,11.9939567 C14.2722847,12.1074366 14.4250462,12.1685412 14.573443,12.1685412 C14.7218399,12.1685412 14.8746013,12.1118012 14.9880812,11.9939567 L20.0073863,6.97465167 C20.6926305,6.28940742 21.0723519,5.37720329 21.0723519,4.40825919 C21.0723519,3.43931509 20.6969951,2.52711096 20.0117509,1.84186671 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+      </span>
+      <div class="mgh_attach_content" *ngIf="ActiveAttach.attachlink">
+        <input placeholder="http://" type="text" class="mgh_attach_linkinpt" formControlName="link">
+        <div class="mgh_attach_subicons">
+          <span class="mgh_attach_icon_submit" (click)="insertlink()">
+            <svg class="mgh_attach_icon_submitimg" width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>تایید</title>
+    <desc></desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Attachicon" transform="translate(-54.000000, -1233.000000)" fill-rule="nonzero" stroke="#979797" stroke-width="1">
+            <g id="Group-10" transform="translate(10.000000, 120.000000)">
+                <g id="Group-4" transform="translate(20.000000, 970.000000)">
+                    <g id="Group-3" transform="translate(15.000000, 133.000000)">
+                        <g id="Group-7" transform="translate(9.000000, 10.000000)">
+                            <path d="M1,6.14285714 L4.20299112,9.90512255 C4.56100606,10.3256505 5.19213977,10.3763273 5.6126677,10.0183123 C5.65853929,9.97925972 5.70078804,9.9361418 5.73889856,9.88948457 L13,1" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+          </span>
+          <span class="mgh_attach_icon_cancel" (click)="CancelLink()">
+            <svg class="mgh_attach_icon_cancelimg" width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>لغو</title>
+    <desc></desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Attachicon" transform="translate(-271.000000, -24.000000)" fill-rule="nonzero" stroke="#979797">
+            <g id="Group-33" transform="translate(0.000000, -1.000000)">
+                <g id="Group-8" transform="translate(20.000000, 15.000000)">
+                    <g id="Group" transform="translate(39.000000, 0.000000)">
+                        <g id="Group-4" transform="translate(213.000000, 10.000000)">
+                            <path d="M0.304625,0.369019608 L8.6796875,8.74408211" id="Path-7"></path>
+                            <path d="M0.304625,0.369019608 L8.6796875,8.74408211" id="Path-7" transform="translate(4.492156, 4.556551) scale(-1, 1) translate(-4.492156, -4.556551) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+          </span>
+        </div>
+      </div>
+      <div class="mgh_attach_sumitedlink" *ngIf="!ActiveAttach.attachlink">
+        <a class="attach_sumitedlink_alink" href="{{LinkSavage?LinkSavage:null}}">{{LinkSavage?LinkSavage:null}}</a>
+      </div>
+
+      <div class="mgh_attached_image" *ngIf="imageUpDatails.size!==null">
+        <img  src="{{imageUpDatails.path}}"  class="mgh_attached_img" [@picin]>
+        <!--<div *ngIf="!imageUpDatails.path" style="width: 143px; height: 100px;margin-bottom: 5px;"  class="mgh_attached_img"></div>-->
+          <div class="attached_image_details">
+          <div class="attached_image_details_name">
+            {{imageUpDatails.name}}
+          </div>
+          <div class="attached_image_details_size">
+            {{imageUpDatails.size|number:'1.0-0'}} KB
+          </div>
+          <div class="attached_image_details_btn">
+            <button type="button" (click)="reomoveimage()">حذف</button>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="mgh_quickque_buttons"  #buttons>
+    <div class="mgh_quickque_btn">
+      <button type="submit" class="mgh_quickque_button">
+        ارسال
+      </button>
+    </div>
+    <div class="mgh_quickque_btn">
+      <ng-select
+                   class="custom"
+                  [items]="cities3"
+                 bindLabel="name"
+                 bindValue="name"
+                 placeholder="انتخاب دسته بندی"
+                 formControlName="category"
+                 >
+
+        <ng-template ng-label-tmp let-item="item">
+          <img height="15" width="15" [src]="item.avatar"/>
+          <b>{{item.name}}</b>
+        </ng-template>
+        <ng-template ng-option-tmp let-item="item" let-index="index">
+          <img height="15" width="15" [src]="item.avatar"/>
+          <b>{{item.name}}</b>
+        </ng-template>
+      </ng-select>
+    </div>
+
+  </div>
+  </form>
+</div>

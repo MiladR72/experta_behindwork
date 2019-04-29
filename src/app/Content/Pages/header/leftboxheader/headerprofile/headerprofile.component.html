@@ -1,0 +1,35 @@
+<img src="./assets/Icons/Svgs/DefultUserIcon.svg" class="leftbox_profile_image1" (click)="ProfileClicked()" (mouseenter)="inprofileicon=true" (mouseleave)="inprofileicon=false">
+<div class="leftbox_profile_menu" [@fadeinout1000]="profilemenu ? 'in': 'out' " (mouseleave)="inprofilemenue=false" (mouseenter)="inprofilemenue=true">
+  <ul>
+    <a routerLink="/profile" routerLinkActive="active">
+      <li class="profile_menu_items" >
+        <div class="profile_menu_icon">
+          <img src="./assets\Icons\Svgs\Person.svg" class="profile_menu_person">
+        </div>
+        <div class="profile_menu_txt">
+          مشاهده پروفایل
+        </div>
+      </li>
+    </a>
+    <a routerLink="/category" routerLinkActive="active">
+      <li class="profile_menu_items">
+        <div class="profile_menu_icon">
+          <img src="./assets\Icons\Svgs\Person.svg" class="profile_menu_person">
+        </div>
+        <div  class="profile_menu_txt">
+          ویرایش علاقه مندی‌ها
+        </div>
+      </li>
+    </a>
+    <a routerLink="/setting" routerLinkActive="active">
+      <li class="profile_menu_items">
+        <div class="profile_menu_icon">
+          <img src="./assets\Icons\Svgs\Person.svg" class="profile_menu_person">
+        </div>
+        <div class="profile_menu_txt">
+          تنظیمات
+        </div>
+      </li>
+    </a>
+  </ul>
+</div>

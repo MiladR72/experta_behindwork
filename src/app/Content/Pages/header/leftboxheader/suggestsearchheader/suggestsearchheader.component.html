@@ -1,0 +1,39 @@
+<div class="mmr_suggest_search" (mouseover)="insidesuggestarea=true" (mouseleave)="insidesuggestarea=false" [@fadeinout300]="showsuggestarea ? 'in': 'out' " >
+  <div class="suggest_search_box">
+    <div class="search_box_suggest1">
+      <div class="suggest_maincontent">
+        سوالات مشابه
+      </div>
+      <div *ngFor="let headerquestion of headerquestions2">
+        <div class="suggest1_subordinate" [innerHTML]="headerquestion">
+        </div>
+      </div>
+      <div class="header_notrespond_search" *ngIf="notresponsequestion"> سوال مشابهی یافت نشد</div>
+    </div>
+    <div class="search_box_suggest1">
+      <div class="suggest_maincontent">
+        دسته بندی
+      </div>
+      <div class="suggest2_subordinate" *ngFor="let headerclassification of headerclassifications2">
+        <div class="suggest2_subordinate_txt" [innerHTML]="headerclassification">
+
+        </div>
+        <img src="src/assets/Icons/Svgs/DefultUserIcon.svg" class="suggest2_subordinate_img">
+
+      </div>
+      <div class="header_notrespond_search" style="text-align: center" *ngIf="notresponseclassification"> دسته ای با این مشخصات یافت نشد</div>
+
+    </div>
+    <div class="search_box_suggest3">
+      <div class="suggest_maincontent">
+        مطالب مشابه بلاگ
+      </div>
+      <div *ngFor="let headersubject of headersubjects2">
+        <div class="suggest3_subordinate" [innerHTML]="headersubject">
+
+        </div>
+      </div>
+      <div class="header_notrespond_search" *ngIf="notresponsesubject"> مطلب مشابهی یافت نشد</div>
+    </div>
+  </div>
+</div>

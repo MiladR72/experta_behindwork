@@ -1,0 +1,65 @@
+<div class="mgh_adminpanel">
+
+  <div class="mgh_adminpanel_title">
+    داشبورد ادمین
+  </div>
+
+  <div class="mgh_adminpanel_content">
+
+    <ul class="mgh_adminpanel_ul" *ngFor="let sub of adminpanel_menus">
+
+        <li class="mgh_adminpanel_li">
+          <span class="mgh_adminpanel_span_icon">
+            <img class="mgh_adminpanel_span_icon_img" src="{{sub.icon}}">
+          </span>
+          <span class="mgh_adminpanel_span_text">{{sub.subtitle}}</span>
+          <ul>
+            <a routerLink="{{titlee.link}}"  routerLinkActive="active"  class="adminpanel_alink" *ngFor="let titlee of sub.titles">
+              <li class="mgh_adminpanel_li_in" >
+                {{titlee.title}}
+                <span class="mgh_adminpanel_li_in" *ngIf="titlee.numspan">
+                {{titlee.numspan?titlee.defult:null}}
+                </span>
+              </li>
+            </a>
+
+          </ul>
+
+        </li>
+
+
+       <!--<a routerLink="./profile"  routerLinkActive="active" class="adminpanel_alink">-->
+        <!--<li class="mgh_adminpanel_li">-->
+      <!--<span class="mgh_adminpanel_span_icon">-->
+        <!--<img class="mgh_adminpanel_span_icon_img" src="./assets/Icons/Svgs/all_contents.svg">-->
+      <!--</span>-->
+          <!--<span class="mgh_adminpanel_span_text">مدیریت کاربران</span>-->
+        <!--</li>-->
+      <!--</a>-->
+
+       <!--<a routerLink="./profile"  routerLinkActive="active" class="adminpanel_alink">-->
+        <!--<li class="mgh_adminpanel_li">-->
+          <!--<ul>-->
+            <!--<li>Blue cheese</li>-->
+            <!--<li>Feta</li>-->
+          <!--</ul>-->
+      <!--<span class="mgh_adminpanel_span_icon">-->
+        <!--<img class="mgh_adminpanel_span_icon_img" src="./assets/Icons/Svgs/all_contents.svg">-->
+      <!--</span>-->
+          <!--<span class="mgh_adminpanel_span_text">ارسال</span>-->
+        <!--</li>-->
+      <!--</a>-->
+
+       <!--<a routerLink="./profile"  routerLinkActive="active" class="adminpanel_alink">-->
+        <!--<li class="mgh_adminpanel_li">-->
+      <!--<span class="mgh_adminpanel_span_icon">-->
+        <!--<img class="mgh_adminpanel_span_icon_img" src="./assets/Icons/Svgs/all_contents.svg">-->
+      <!--</span>-->
+          <!--<span class="mgh_adminpanel_span_text">مدیریت صفحات سایت</span>-->
+        <!--</li>-->
+      <!--</a>-->
+
+    </ul>
+  </div>
+
+</div>

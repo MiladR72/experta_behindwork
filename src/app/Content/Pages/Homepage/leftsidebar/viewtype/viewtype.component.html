@@ -1,0 +1,89 @@
+<div class="mgh_viewtypes">
+
+  <h3 class="mgh_viewtypes_title">
+    مشاهده بر اساس
+  </h3>
+
+  <div class="mgh_viewtypes_content">
+
+    <ul class="mgh_viewtypes_ul" [ngClass]="nocategorization?'container':null">
+      <a  class="mgh_viewtypes_alink {{defualt}}"
+         routerLink="./"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="true"
+         [queryParams]="{viewtypes:'ALL'}"
+         queryParamsHandling="merge"
+      >
+    <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/all_contents.svg">
+      </span>
+      <span class="mgh_viewtypes_span_text">همه مطالب</span>
+    </li>
+      </a>
+      <a class="mgh_viewtypes_alink"
+         routerLink="./"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="true"
+         [queryParams]="{viewtypes:'MostViewedQuestions'}"
+         queryParamsHandling="merge"
+      >
+        <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/conversation.svg">
+      </span>
+          <span class="mgh_viewtypes_span_text">سوالات پرمخاطب</span>
+        </li>
+      </a>
+      <a  class="mgh_viewtypes_alink"
+          routerLink="./"
+          [queryParams]="{viewtypes:'WaitAwnserQuestions'}"
+         routerLinkActive="active"
+          queryParamsHandling="merge"
+      >
+    <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/NoneAnswer.svg">
+      </span>
+      <span class="mgh_viewtypes_span_text">سوالات بدون پاسخ</span>
+    </li>
+    </a>
+      <a class="mgh_viewtypes_alink"
+         routerLink="./"
+         [queryParams]="{viewtypes:'Sugestexperts'}"
+         routerLinkActive="active"
+         queryParamsHandling="merge"
+      >
+    <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/Experts.svg">
+      </span>
+      <span class="mgh_viewtypes_span_text">متخصصان پیشنهادی</span>
+    </li>
+      </a>
+      <a class="mgh_viewtypes_alink"
+         routerLink="./"
+         [queryParams]="{viewtypes:'MostViewedBlogs'}"
+         routerLinkActive="active"
+         queryParamsHandling="merge"
+      >
+    <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/weblog.svg">
+      </span>
+      <!--<span style="position: absolute"> sgh</span>-->
+      <span class="mgh_viewtypes_span_text">مطالب وبلاگ</span>
+    </li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="bottom_viewtype_add">
+    <button  type="button" class="leftbox_addbutton_bottom">
+        <span class="leftbox_addbutton_icon">
+          <img src="./assets/Icons/Svgs/plus_white.svg" class="addbutton_img">
+        </span>
+    </button>
+  </div>
+
+</div>

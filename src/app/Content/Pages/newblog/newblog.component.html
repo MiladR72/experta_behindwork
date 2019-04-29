@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 mgh_right_newblog">
+      <div class="mgh_right_newblog_content">
+        <input class="mgh_newblog_input" type="text"  placeholder="عنوان مطلب را اینجا وارد کنید">
+        <textarea  placeholder="چه سوالی در ذهنتون دارید؟"
+                   #textArea
+                   maxlength="240"
+                   class="mgh_newblog_textbox"></textarea>
+
+      </div>
+      <div class="mgh_newblog_buttons"  #buttons>
+        <div class="mgh_quickque_btn">
+          <button type="submit" class="mgh_quickque_button">
+            انتشار محتوا
+          </button>
+        </div>
+        <div class="mgh_quickque_btn">
+          <ng-select
+            class="custom"
+            [items]="cities3"
+            bindLabel="name"
+            bindValue="name"
+            placeholder="انتخاب دسته بندی"
+          >
+
+            <ng-template ng-label-tmp let-item="item">
+              <img height="15" width="15" [src]="item.avatar"/>
+              <b>{{item.name}}</b>
+            </ng-template>
+            <ng-template ng-option-tmp let-item="item" let-index="index">
+              <img height="15" width="15" [src]="item.avatar"/>
+              <b>{{item.name}}</b>
+            </ng-template>
+          </ng-select>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-sm-3 mgh_left_newblog_content">
+      <div class="mgh_newblog_upload">
+        <div class="mgh_newblog_upload_icon">
+          <img class="mgh_newblog_upload_img" src="./assets/Icons/Svgs/image.svg">
+        </div>
+        <div class="mgh_newblog_upload_text">
+          آپلود تصویر اصلی
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+</div>

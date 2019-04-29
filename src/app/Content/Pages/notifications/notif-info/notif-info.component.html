@@ -1,0 +1,50 @@
+<div class="mgh_notifInfo" >
+  <h3 class="mgh_container_title">
+    آخرین اعلانات شما
+  </h3>
+  <span class="mgh_container_sectitle">
+    ۵ اعلانات جدید
+  </span>
+  <div class="notifInfo_contents">
+    <div class="mgh_prfollowers_contents">
+      <div class="mgh_prfollowers_rightside">
+          <span class="prfollowers_icon">
+            <img src="./assets/Icons/Svgs/plus.svg">
+          </span>
+        <div class="prfollowers_image">
+          <img src="./assets/fake_images/specialists1.jpg" class="prfollowers_img">
+        </div>
+        <div class="mgh_prfollowers_content_text">
+
+          <div class="mgh_prfollowers_name">
+            رضا کریمی
+          </div>
+          <div class="mgh_prfollowers_experts">
+            شما را دنبال میکند
+          </div>
+        </div>
+      </div>
+      <div class="mgh_prfollowers_lefttside">
+        <div class="mgh_event_date_dates">
+            <span class="mgh_event_date">
+              ۱۲ روز پیش
+            </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="mgh_more_load" (click)="Loadmore()" >
+    <span class="mgh_more_load_text">
+      نمایش بیشتر
+    </span>
+    <span class="mgh_more_load_icon">
+      <img *ngIf="!loading" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAC9wAAAvcBLRSNOAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADNSURBVGiB7dSxDcIwEAXQf9kgC2QFkBKlpGMhCsQUZBIYAImK1gUlBR09kaC/o6GKjePKQcp/5Vn/7F8kABEREREREdE8SWjonKvMrBOR1Xd0EZFtXdf3lKU5814B51wF4AqgHBz1qrpo2/YxdnnOfDFcYGZdIAwAZVEU+9jlU+S9AiKyjuyPnU2S9wrgx3eRcDZJPlTgHFlwSnhA1nyowA5AH5g/VXWT8ICsea9A0zQ3AEszOwJ4A3iJyEFVl2N/kH/IExEREREREc3FByq0f+OVp4DIAAAAAElFTkSuQmCC">
+      <img *ngIf="loading" src="./assets/Icons/Svgs/SVG-Loaders-master/svg-loaders/three-dots.svg" width="60" alt="">
+    </span>
+
+  </div>
+
+</div>

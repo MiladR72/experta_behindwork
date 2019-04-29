@@ -1,0 +1,81 @@
+<div  *ngIf="showsidebarcategorization" class="mgh_categorization">
+
+  <div class="mgh_categorization_title">
+      <h3 class="mgh_categorization_title_h3">دسته بندی مطالب</h3>
+    <span class="mgh_categorization_title_icon"><img class="mgh_categorization_title_img" src="./assets/Icons/Svgs/draft.svg"></span>
+  </div>
+
+  <div class="mgh_categorization_content">
+    <ul class="mgh_categorization_ul">
+      <a class="mgh_categorization_alink {{defualt}}"
+         [routerLinkActiveOptions]="true"
+         routerLinkActive="active"
+        routerLink="./"
+         [queryParams]="{categorization:'ALL'}"
+         queryParamsHandling="merge"
+      >
+      <li class="mgh_categorization_li">
+        <span class="mgh_categorization_span_text">مشاهده همه موضوعات</span>
+        <span class="mgh_categorization_span_icon">
+        <img class="mgh_categorization_span_icon_img_plus" src="./assets/Icons/Svgs/plus.svg">
+        </span>
+      </li>
+      </a>
+      <a
+        class="mgh_categorization_alink"
+        routerLinkActive="active"
+        routerLink="./"
+         [queryParams]="{categorization:'Startups'}"
+         queryParamsHandling="merge"
+
+      >
+
+        <li class="mgh_categorization_li">
+          <span class="mgh_categorization_span_text">استارتاپ</span>
+          <span class="mgh_categorization_span_icon">
+        <img class="mgh_categorization_span_icon_img_plus" src="./assets/Icons/Svgs/plus.svg">
+        </span>
+        </li>
+      </a>
+      <a
+        class="mgh_categorization_alink"
+        routerLinkActive="active"
+        routerLink="./"
+         [queryParams]="{categorization:'Tec'}"
+         queryParamsHandling="merge"
+      >
+      <li class="mgh_categorization_li">
+        <span class="mgh_categorization_span_text">تکنولوژی</span>
+        <span class="mgh_categorization_span_icon">
+        <img class="mgh_categorization_span_icon_img_plus" src="./assets/Icons/Svgs/plus.svg">
+        </span>
+      </li>
+      </a>
+        <a
+            class="mgh_categorization_alink"
+            routerLinkActive="active"
+            routerLink="./"
+           [queryParams]="{categorization:'Design'}"
+           queryParamsHandling="merge"
+        >
+      <li class="mgh_categorization_li">
+        <span class="mgh_categorization_span_text">طراحی</span>
+        <span class="mgh_categorization_span_icon">
+        <img class="mgh_categorization_span_icon_img_plus" src="./assets/Icons/Svgs/plus.svg">
+        </span>
+      </li>
+        </a>
+       <!--<a routerLink="./"-->
+             <!--[queryParams]="{categorization:'MostViewedQuestions'}">-->
+      <li class="mgh_categorization_li">
+       <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_categorization_span_icon_img_plus" src="./assets/Icons/Svgs/plus.svg">
+      </span>
+        <span class="mgh_viewtypes_span_text">افزودن علاقه مندی جدید</span>
+      </li>
+       <!--</a>-->
+    </ul>
+
+  </div>
+
+</div>

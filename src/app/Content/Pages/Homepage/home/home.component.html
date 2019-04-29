@@ -1,0 +1,31 @@
+<div class="mgh_home_container">
+  <app-quickque>
+
+  </app-quickque>
+</div>
+<div [@newcomphome]="'defult'" *ngIf="togglecontainer==='ALL'||togglecontainer==='MostViewedQuestions'" class="mgh_home_container">
+  <app-most-viewed-questions>
+
+  </app-most-viewed-questions>
+</div>
+<div [@newcomphome]="'defult'" *ngIf="togglecontainer==='ALL'||togglecontainer==='Specialists'" class="mgh_home_container">
+  <app-specialists>
+
+  </app-specialists>
+</div>
+<div [@newcomphome]="'defult'" *ngIf="togglecontainer==='ALL'||togglecontainer==='Sugestexperts'" class="mgh_home_container">
+  <app-sugestexperts>
+
+  </app-sugestexperts>
+</div>
+
+<div [@newcomphome]="'defult'" *ngIf="togglecontainer==='ALL'||togglecontainer==='WaitAwnserQuestions'" class="mgh_home_container">
+  <app-wait-awnser-questions>
+
+  </app-wait-awnser-questions>
+</div>
+<div [@newcomphome]="'defult'" *ngIf="togglecontainer==='ALL'||togglecontainer==='MostViewedBlogs'" class="mgh_home_container">
+  <app-most-viewed-blogs>
+
+  </app-most-viewed-blogs>
+</div>

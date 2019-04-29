@@ -1,0 +1,19 @@
+<div class="mmr_searchpage_title">
+  محتواهای مرتبط با
+</div>
+<div class="leftbox_searchinput searchpage" >
+  <input  type="text"  aria-label="Search" class="searchinput_inpt searchpage" placeholder="یک چیزی جستجو کن"   #searchpageinput style="    width: 100%;">
+  <div class="searchinput_icon"
+       [routerLink]="['./']"
+       [queryParams]="{ search: searchpageinput.value }"
+       queryParamsHandling="merge" >
+    <img src="./assets/Icons/Svgs/Path2.svg" class="searchinput_icon">
+  </div>
+</div>
+<div style="margin-bottom: 30px" [@newcomphome]="'defult'" *ngIf="togglecontainer==='ALL'||togglecontainer==='MostViewedBlogs'" >
+  <app-most-viewed-blogs></app-most-viewed-blogs>
+</div>
+<div style="margin-bottom: 30px" [@newcomphome]="'defult'" *ngIf="togglecontainer==='ALL'||togglecontainer==='MostViewedQuestions'">
+  <app-related-questions></app-related-questions>
+</div>
+

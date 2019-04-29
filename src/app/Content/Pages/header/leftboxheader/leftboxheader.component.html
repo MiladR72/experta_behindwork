@@ -1,0 +1,31 @@
+<div class="mgh_header_leftbox">
+  <div class="leftbox addbtn">
+    <button  type="button" class="leftbox_addbutton">
+        <span class="leftbox_addbutton_icon">
+          <img src="./assets/Icons/Svgs/plus_white.svg" class="addbutton_img">
+        </span>
+    </button>
+  </div>
+  <div class="leftbox_searchinput" >
+    <app-headerinput></app-headerinput>
+    <div class="searchinput_icon"
+         [routerLink]="['/searchpage']"
+         [queryParams]="{ search: headersearchvalue }"
+         queryParamsHandling="merge">
+      <img src="./assets/Icons/Svgs/Path2.svg" class="searchinput_icon">
+    </div>
+    <app-suggestsearchheader></app-suggestsearchheader>
+    <img    class="searchinput_img">
+    <div class="searchinput_cross_div" >
+      <img src="./assets/Icons/Svgs/cross.svg" class="searchinput_cross">
+    </div>
+  </div>
+  <div class="leftbox_profile_image">
+
+    <app-headerprofile></app-headerprofile>
+
+  </div>
+  <div class="leftbox_logo" [routerLink]="['/']">
+    <img src="./assets/Icons/Svgs/Xperta_logo.svg" class="header_centertbox_logo">
+  </div>
+</div>

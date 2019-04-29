@@ -1,0 +1,85 @@
+<div class="mgh_viewtypes">
+
+  <h3 class="mgh_viewtypes_title">
+    مشاهده بر اساس
+  </h3>
+
+  <div class="mgh_viewtypes_content">
+
+    <ul class="mgh_viewtypes_ul" [ngClass]="nocategorization?'container':null">
+      <a  class="mgh_viewtypes_alink {{defualt}}"
+          routerLink="./"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="true"
+          [queryParams]="{viewtypes:'ALL'}"
+      >
+        <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/all_contents.svg">
+      </span>
+          <span class="mgh_viewtypes_span_text">همه اعلانات</span>
+        </li>
+      </a>
+      <a class="mgh_viewtypes_alink"
+         routerLink="./"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="true"
+         [queryParams]="{viewtypes:'following'}"
+      >
+        <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/conversation.svg">
+      </span>
+          <span class="mgh_viewtypes_span_text">دنبال کننده ها</span>
+        </li>
+      </a>
+      <a  class="mgh_viewtypes_alink"
+          routerLink="./"
+          [queryParams]="{viewtypes:'likes'}"
+          routerLinkActive="active"
+          queryParamsHandling="merge"
+      >
+        <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/NoneAnswer.svg">
+      </span>
+          <span class="mgh_viewtypes_span_text">لایک کننده ها</span>
+        </li>
+      </a>
+      <a class="mgh_viewtypes_alink"
+         routerLink="./"
+         [queryParams]="{viewtypes:'answers'}"
+         routerLinkActive="active"
+      >
+        <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/Experts.svg">
+      </span>
+          <span class="mgh_viewtypes_span_text">پاسخ دهنده ها</span>
+        </li>
+      </a>
+      <a class="mgh_viewtypes_alink"
+         routerLink="./"
+         [queryParams]="{viewtypes:'invites'}"
+         routerLinkActive="active"
+      >
+        <li class="mgh_viewtypes_li">
+      <span class="mgh_viewtypes_span_icon">
+        <img class="mgh_viewtypes_span_icon_img" src="./assets/Icons/Svgs/weblog.svg">
+      </span>
+          <!--<span style="position: absolute"> sgh</span>-->
+          <span class="mgh_viewtypes_span_text">دعوت به پاسخ ها</span>
+        </li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="bottom_viewtype_add">
+    <button  type="button" class="leftbox_addbutton_bottom">
+        <span class="leftbox_addbutton_icon">
+          <img src="./assets/Icons/Svgs/plus_white.svg" class="addbutton_img">
+        </span>
+    </button>
+  </div>
+
+</div>

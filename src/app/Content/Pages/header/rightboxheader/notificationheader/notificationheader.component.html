@@ -1,0 +1,13 @@
+<div class="rightbox_profile_menu" [@fadeinout1000]="!notif ? 'out' : 'in'">
+  <div style="margin-bottom: 15px">
+    <div class="rprofile_menu_title">اعلانات جدید</div>
+    <div class="rprofile_menu_items" *ngFor="let headernotification of headernotifications1">
+      <div class="rprofile_menu_icon">
+        <img src={{headernotification.image}} class="rprofile_menu_person" width="14.7">
+      </div>
+      <div class="rprofile_menu_txt">
+        {{headernotification.event}}
+      </div>
+    </div>
+  </div>
+</div>

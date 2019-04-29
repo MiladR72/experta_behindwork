@@ -1,0 +1,12 @@
+<div class="mgh_rightsidebar_container">
+  <div *ngxPermissionsOnly="'GUEST'">
+    <app-welcome>
+    </app-welcome>
+  </div>
+  <div *ngxPermissionsOnly="['USER','ADMIN']">
+    <app-user-statics>
+    </app-user-statics>
+  </div>
+
+
+</div>

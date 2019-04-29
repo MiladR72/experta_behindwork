@@ -1,0 +1,45 @@
+<div class="mgh_logo_login_mobile_view">
+  <a class="logo_login_link" href="./">
+      <img  class="mgh_topbar_logo_auth_img" src="./assets/Icons/Svgs/Xperta_logo.svg">
+  </a>
+</div>
+<div class="container-fluid  mgh_full_containeer_Auth">
+
+<div class="row mgh_height_full">
+  <div class="col-12 col-lg-7 mgh_right_container " >
+    <div class="mgh_logo_login">
+      <a class="logo_login_link" href="./">
+          <img  class="mgh_topbar_logo_auth_img" src="./assets/Icons/Svgs/Xperta_logo.svg">
+      </a>
+    </div>
+
+
+<div class="mgh_right_container_content">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 mgh_Auth_Title ">
+      <h2 *ngIf="!(Auth_type === 'Forget')"  class="mgh_Auth_Title_Text ">
+        از تجربیات افراد متخصص حوزه خود استفاده کنید !
+      </h2>
+      <h3 *ngIf="Auth_type === 'Forget'"  class="mgh_Auth_Title_Text_forget ">
+      برای بازیابی رمز عبور خود ، آدرس ایمیل یا نام کاربری خود را وارد کنید
+    </h3>
+    </div>
+    <div class="col-lg-7 mgh_group_input_login">
+
+        <app-sign-in *ngIf="Auth_type === 'SignIn'" [(Auth_type)]="Auth_type" ></app-sign-in>
+
+        <app-sign-up *ngIf="Auth_type === 'SignUp'" [(Auth_type)]="Auth_type" ></app-sign-up>
+
+        <app-forgetpass *ngIf="Auth_type === 'Forget'" [(Auth_type)]="Auth_type"></app-forgetpass>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,22 @@
+<div class="mgh_adminpanel_details">
+  <div class="adminpanel_submenu">
+    <ul class="adminpanel_submenu_ul">
+      <a class="adminpanel_submenu_a" routerLink="create" routerLinkActive="active" [routerLinkActiveOptions]="true">
+        <li class="adminpanel_submenu_li">جدید</li>
+      </a>
+      <a class="adminpanel_submenu_a" routerLink="lists" routerLinkActive="active">
+        <li class="adminpanel_submenu_li">نوشته ها</li>
+      </a>
+    </ul>
+    <ul class="adminpanel_submenu mgh_secend">
+      <div  class="adminpanel_searchinput">
+        <input type="text" class="adminpanel_search_input" placeholder="جستجو">
+        <img  class="adminpanel_searchinput_icon" src="./assets/Icons/Svgs/Path2.svg">
+      </div>
+
+    </ul>
+  </div>
+  <div class="adminpanel_table">
+    <router-outlet></router-outlet>
+  </div>
+</div>

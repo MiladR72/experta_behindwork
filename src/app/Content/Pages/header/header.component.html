@@ -1,0 +1,16 @@
+<div style="width: 100%; height: 82px"></div>
+<div class="mmr_full_header_background" [@headerinout]="headerinoutstate" >
+  <div class="container ">
+    <div  class="row">
+      <div class="col-sm-12 mgh_header_content">
+        <div  class="mmr_header">
+          <app-rightboxheader class="mgh_header_rightbox_root"></app-rightboxheader>
+          <app-centerboxheader></app-centerboxheader>
+          <app-leftboxheader></app-leftboxheader>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="input_darkness" *ngIf="darkback" [@headerinout]="headerinoutstate"></div>
+

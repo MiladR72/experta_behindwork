@@ -1,0 +1,49 @@
+<div class="mgh_sign_up" [@newcompe]="'defult'" >
+  <form [formGroup]="SignUp" (ngSubmit)="Register()">
+<div class="mgh_groups_login">
+  <input type="text" id="user" class="mgh_input_login float-right" dir="ltr" formControlName="username">
+  <span class="mgh_label_input_login_wrapper"><label for="user" class="mgh_label_input_login">نام کاربری</label></span>
+</div>
+<div class="mgh_groups_login">
+  <input type="text" id="email" class="mgh_input_login float-right" dir="ltr" formControlName="email">
+  <span class="mgh_label_input_login_wrapper"><label for="email" class="mgh_label_input_login">ایمیل</label></span>
+</div>
+<div class="mgh_groups_login">
+  <input type="text" id="password" class="mgh_input_login float-right" dir="ltr" formControlName="pass">
+  <span class="mgh_label_input_login_wrapper"><label for="password" class="mgh_label_input_login">رمز عبور</label></span>
+</div>
+
+<div class="mgh_button_wrapper">
+  <button *ngIf="!loading" type="submit" class="mgh_button_login" [disabled]="SignUp.invalid">ثبت نام</button>
+  <span style="width: 100px;text-align: center" *ngIf="loading">
+    <img  src="./assets/Icons/Svgs/SVG-Loaders-master/svg-loaders/three-dots.svg" width="60" height="45" alt="">
+  </span>
+  <span class="auth_errors" *ngIf="errors!==[]" >
+    <div *ngFor="let error of errors"  class="alert {{status?'alert-success':'alert-danger'}}" style="padding: 0.45rem 0.55rem;">{{error}}</div>
+  </span>
+
+
+</div>
+  </form>
+<div class="mgh_change_type">
+  <a href="javascript:;" (click)="Toggle_type($event)">
+
+            <span class="mgh_change_type_text">
+        حساب کاربری دارید؟
+        </span>
+  </a>
+
+</div>
+
+<div class="mgh_login_type">
+  <a class="mgh_login_type_link">
+              <span class="mgh_login_icon">ورود با گوگل <img class="mgh_icons_SignIn" [src]="icons.google">
+              </span>
+  </a>
+  <a class="mgh_login_type_link">
+              <span class="mgh_login_icon">
+              ورود با لینکدین <img class="mgh_icons_SignIn" [src]="icons.linkdin">
+              </span>
+  </a>
+</div>
+</div>
